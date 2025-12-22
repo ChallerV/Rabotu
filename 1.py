@@ -1,15 +1,11 @@
-tries = 3
+true_kod = 4590
 
 while True:
-    pas = input(f"Введите пароль (У вас {tries} попытки на отгадку): ")
 
-    if pas == "admin":
-        print("Доступ разрешён")
+    kod = int(input("Введите пин-код: "))
+
+    if kod == true_kod:
+        print("Поздравляю вы вошли!")
         break
 
-    if tries == 1:
-        print("Вход заблокирован")
-        break
-
-    else:
-        tries = tries - 1
+    print("Ошибка пробуйте ещё раз")
